@@ -62,8 +62,7 @@ const categories = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the container where you want to append the category items
-  const carListContainer = document.querySelector("#category-list"); // Select by ID using "#category-list"
+  const carListContainer = document.querySelector("#category-list");
 
   categories.forEach((category) => {
     const categoryItem = `

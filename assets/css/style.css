@@ -6633,7 +6633,7 @@ body.rtl-mode .price-wrapper {
   }
 
   .copyright .footer-menu {
-    float: left;
+    float: none;
     margin-top: 20px;
     text-align: left;
   }
