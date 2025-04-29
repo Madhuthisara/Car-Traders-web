@@ -9,10 +9,10 @@
     <meta name="keywords" content="" />
 
     <!-- title -->
-    <title>Motex - Car Dealer And Automotive HTML5 Template</title>
+    <title>Waruna Lanka Auto Traders</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/logo1.png" />
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -24,9 +24,27 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
     <link rel="stylesheet" href="assets/css/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+     <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+
+<!-- Your custom styles -->
+ <style>
+  .intl-tel-input {
+    width: 100%;
+
+  }
+  .intl-tel-input .country-list {
+    z-index: 999;
+  }
+</style>
+
   </head>
 
   <body>
+ 
+
     <!-- preloader -->
     <div class="preloader">
       <div class="loader-ripple">
@@ -66,10 +84,9 @@
               </div>
             </div>
             <div class="header-top-right">
-              <div class="header-top-link">
+              <!-- <div class="header-top-link">
                 <a href="#"><i class="far fa-arrow-right-to-arc"></i> Login</a>
-                <!-- <a href="#"><i class="far fa-user-vneck"></i> Register</a> -->
-              </div>
+              </div> -->
               <div class="header-top-social">
                 <span>Follow Us: </span>
                 <a
@@ -138,11 +155,7 @@
                     ><span class="far fa-plus-circle"></span>Add Listing</a
                   >
                 </div>
-                <div class="sidebar-btn">
-                  <button type="button" class="nav-right-link">
-                    <i class="far fa-bars-sort"></i>
-                  </button>
-                </div>
+                
               </div>
             </div>
             <!-- search area -->
@@ -166,60 +179,6 @@
       </div>
     </header>
     <!-- header area end -->
-
-    <!-- sidebar-popup -->
-    <div class="sidebar-popup">
-      <div class="sidebar-wrapper">
-        <div class="sidebar-content">
-          <button type="button" class="close-sidebar-popup">
-            <i class="far fa-xmark"></i>
-          </button>
-          <div class="sidebar-logo">
-            <img src="assets/img/logo/logo.png" alt="" />
-          </div>
-          <div class="sidebar-about">
-            <h4>About Us</h4>
-            <p>
-              There are many variations of passages available sure there
-              majority have suffered alteration in some form by injected humour
-              or randomised words which don't look even slightly believable.
-            </p>
-          </div>
-          <div class="sidebar-contact">
-            <h4>Contact Info</h4>
-            <ul>
-              <li>
-                <h6>Email</h6>
-                <a href="mailto:info@example.com"
-                  ><i class="far fa-envelope"></i>info@example.com</a
-                >
-              </li>
-              <li>
-                <h6>Phone</h6>
-                <a href="tel:+21236547898"
-                  ><i class="far fa-phone"></i>+2 123 654 7898</a
-                >
-              </li>
-              <li>
-                <h6>Address</h6>
-                <a href="#"
-                  ><i class="far fa-location-dot"></i>25/B Milford Road, New
-                  York</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="sidebar-social">
-            <h4>Follow Us</h4>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- sidebar-popup end -->
 
     <main class="main">
       <!-- hero slider -->
@@ -404,14 +363,35 @@
             <h4 class="find-car-title">Let's Find Your Perfect Car</h4>
             <form id="carSearchForm" action="#">
               <div class="row">
-                <div class="col-lg-3">
+                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label>Car Condition</label>
-                    <select class="select">
-                      <option value="1">All Status</option>
-                      <option value="2">New Car</option>
-                      <option value="3">Used Car</option>
-                    </select>
+                    <label >Your Name</label>
+                     <input type="text" class="form-control" placeholder="Enter Your Name" aria-label="Enter Your Name">
+                  </div>
+                </div>
+                 <div class="col-lg-6">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+               <!-- Your phone input field -->
+
+                <div class="col-lg-3">
+                  <div class="form-group position-relative">
+                    <label for="phone">Contact Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-control"
+                      placeholder="Enter contact number"
+                    />
+                    <small id="phone-error" class="text-danger d-none mt-1">Please enter a valid phone number.</small>
                   </div>
                 </div>
                 <div class="col-lg-3">
@@ -430,98 +410,63 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Car Model</label>
-                    <select class="select">
-                      <option value="1">All Model</option>
-                      <option value="2">3-Series</option>
-                      <option value="3">Carrera</option>
-                      <option value="4">G-TR</option>
-                      <option value="3">Macan</option>
-                      <option value="3">N-Series</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Choose Year</label>
-                    <select class="select">
-                      <option value="1">All Year</option>
-                      <option value="2">2023</option>
-                      <option value="3">2022</option>
-                      <option value="4">2021</option>
-                      <option value="5">2020</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Choose Milieage</label>
-                    <select class="select">
-                      <option value="1">All Milieage</option>
-                      <option value="2">2000 Miles</option>
-                      <option value="3">3000 Miles</option>
-                      <option value="4">4000 Miles</option>
-                      <option value="5">5000 Miles</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Price Range</label>
-                    <select class="select">
-                      <option value="1">All Price</option>
-                      <option value="2">$1,000 - $5,000</option>
-                      <option value="3">$5,000 - $10,000</option>
-                      <option value="4">$15,000 - $20,000</option>
-                      <option value="5">$20,000 - $25,000</option>
-                      <option value="6">$25,000 - $30,000</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Body Type</label>
-                    <select class="select">
-                      <option value="1">All Body Type</option>
-                      <option value="2">Sedan</option>
-                      <option value="5">Compact</option>
-                      <option value="3">Coupe</option>
-                      <option value="4">Wagon</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Your Name</label>
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Enter your name"
+                      placeholder="Enter car model (e.g. 3-Series)"
                     />
                   </div>
                 </div>
 
                 <div class="col-lg-3">
                   <div class="form-group">
-                    <label>Contact Number</label>
+                    <label>Car Condition</label>
                     <input
-                      type="tel"
+                      type="text"
                       class="form-control"
-                      placeholder="Enter contact number"
+                      placeholder="Enter condition (New/Used)"
                     />
                   </div>
                 </div>
 
                 <div class="col-lg-3">
                   <div class="form-group">
-                    <label>Email</label>
+                    <label>Choose Mileage</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
-                      placeholder="Enter your email"
+                      placeholder="Enter mileage (e.g. 3000 Miles)"
                     />
                   </div>
                 </div>
 
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label>Choose Year</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter year (e.g. 2023)"
+                    />
+                  </div>
+                </div>
+
+            
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label>Price Range</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter price range (e.g. $5,000 - $10,000)"
+                    />
+                  </div>
+                </div>
+
+                
+               
+
+            
                 <div class="col-lg-3 align-self-end">
                   <button class="theme-btn" type="submit">
                     <span class="far fa-search"></span> Find Your Car
@@ -560,20 +505,31 @@
                   <span class="site-title-tagline justify-content-start">
                     <i class="flaticon-drive"></i> About Us
                   </span>
-                  <h2 class="site-title">
-                    World Largest <span>Car Dealer</span> Marketplace.
+                 <h2 class="site-title">
+                    Sri Lankan Largest <span>Car Dealer</span> Marketplace.
                   </h2>
                 </div>
                 <p class="about-text">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour.
+                  We are one of the leading dealers and direct importers of
+                  high-quality vehicles and machinery from Japan, the UK,
+                  Thailand, and Australia. Our diverse inventory includes cars,
+                  trucks, and heavy machinery, sourced directly from trusted
+                  manufacturers and suppliers.
                 </p>
                 <div class="about-list-wrapper">
                   <ul class="about-list list-unstyled">
-                    <li>At vero eos et accusamus et iusto odio.</li>
-                    <li>Established fact that a reader will be distracted.</li>
-                    <li>Sed ut perspiciatis unde omnis iste natus sit.</li>
+                    <li>
+                      We provide a wide selection of vehicles from top
+                      international markets.
+                    </li>
+                    <li>
+                      We ensure a seamless purchasing experience for our
+                      customers.
+                    </li>
+                    <li>
+                      Our vehicles undergo rigorous checks to guarantee quality
+                      and reliability.
+                    </li>
                   </ul>
                 </div>
                 <a href="about.html" class="theme-btn mt-4"
@@ -706,220 +662,6 @@
       </div>
       <!-- car category end-->
 
-      <!-- video area -->
-      <div class="video-area pb-120">
-        <div class="container-fluid px-0">
-          <div
-            class="video-content"
-            style="background-image: url(assets/img/video/01.jpg)"
-          >
-            <div class="row align-items-center">
-              <div class="col-lg-12">
-                <div class="video-wrapper">
-                  <a
-                    class="play-btn popup-youtube"
-                    href="https://www.youtube.com/watch?v=ckHzmP1evNU"
-                  >
-                    <i class="fas fa-play"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- video area end -->
-
-      <!-- car dealer -->
-      <div class="car-dealer pb-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="site-heading text-center">
-                <span class="site-title-tagline"
-                  ><i class="flaticon-drive"></i> Car Dealers</span
-                >
-                <h2 class="site-title">
-                  Best Dealers In <span>Your City</span>
-                </h2>
-                <div class="heading-divider"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".25s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">25 Listing</span>
-                  <img src="assets/img/dealer/01.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Automotive Gear</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".50s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">35 Listing</span>
-                  <img src="assets/img/dealer/02.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Keithson Car</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".75s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">15 Listing</span>
-                  <img src="assets/img/dealer/03.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Superious Automotive</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay="1s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">20 Listing</span>
-                  <img src="assets/img/dealer/04.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Racing Gear Car</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".25s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">19 Listing</span>
-                  <img src="assets/img/dealer/05.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Car Showromio</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".50s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">40 Listing</span>
-                  <img src="assets/img/dealer/06.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Fastspeedio Car</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay=".75s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">59 Listing</span>
-                  <img src="assets/img/dealer/07.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Star AutoMall</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="dealer-item wow fadeInUp" data-wow-delay="1s">
-                <div class="dealer-img">
-                  <span class="dealer-listing">28 Listing</span>
-                  <img src="assets/img/dealer/08.png" alt="" />
-                </div>
-                <div class="dealer-content">
-                  <h4><a href="#">Superspeed Auto</a></h4>
-                  <ul>
-                    <li>
-                      <i class="far fa-location-dot"></i> 25/B Milford Road, New
-                      York
-                    </li>
-                    <li>
-                      <i class="far fa-phone"></i>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- car dealer end-->
-
       <!-- choose area -->
       <div class="choose-area py-120">
         <div class="container">
@@ -936,10 +678,7 @@
                     We are dedicated <span>to provide</span> quality service
                   </h2>
                   <p class="text-white">
-                    There are many variations of passages available but the
-                    majority have suffered alteration in some form going to use
-                    a passage by injected humour randomised words which don't
-                    look even slightly believable.
+                   We take pride in delivering reliable, high-quality service tailored to your needs. While others settle for generic solutions, we focus on precision, professionalism, and genuine care—because your satisfaction drives everything we do.
                   </p>
                 </div>
                 <div class="choose-img wow fadeInUp" data-wow-delay=".25s">
@@ -962,9 +701,7 @@
                       <div class="choose-item-info">
                         <h3>Best Quality Cars</h3>
                         <p>
-                          There are many variations of the passages available
-                          but the majo have suffered fact that reader will be
-                          dist alteration.
+                         Explore top-quality cars, inspected for reliability and comfort—designed to deliver style, performance, and peace of mind.
                         </p>
                       </div>
                     </div>
@@ -976,9 +713,7 @@
                       <div class="choose-item-info">
                         <h3>Popular Brands</h3>
                         <p>
-                          There are many variations of the passages available
-                          but the majo have suffered fact that reader will be
-                          dist alteration.
+                         We offer a wide range of popular car brands known for their quality, performance, and reliability—trusted by drivers worldwide.
                         </p>
                       </div>
                     </div>
@@ -992,9 +727,7 @@
                       <div class="choose-item-info">
                         <h3>Certified Mechanics</h3>
                         <p>
-                          There are many variations of the passages available
-                          but the majo have suffered fact that reader will be
-                          dist alteration.
+                          Certified experts delivering trusted service with proven skills and experience to keep your vehicle in top condition.
                         </p>
                       </div>
                     </div>
@@ -1006,9 +739,7 @@
                       <div class="choose-item-info">
                         <h3>Reasonable Price</h3>
                         <p>
-                          There are many variations of the passages available
-                          but the majo have suffered fact that reader will be
-                          dist alteration.
+                          Get the best value for your money with our competitively priced vehicles—quality and affordability, perfectly balanced.
                         </p>
                       </div>
                     </div>
@@ -1097,278 +828,9 @@
       </div>
       <!-- car brand end-->
 
-      <!-- testimonial area -->
-      <div class="testimonial-area bg py-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="site-heading text-center">
-                <span class="site-title-tagline"
-                  ><i class="flaticon-drive"></i>Testimonials</span
-                >
-                <h2 class="site-title">What Our Client <span>Say's</span></h2>
-                <div class="heading-divider"></div>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="testimonial-slider owl-carousel owl-theme" id="testimonial-slider">
-          </div> -->
-      <div class="testimonial-slider owl-carousel owl-theme">
-            <div class="testimonial-single">
-              <div class="testimonial-content">
-                <div class="testimonial-author-img">
-                  <img src="assets/img/testimonial/01.jpg" alt="" />
-                </div>
-                <div class="testimonial-author-info">
-                  <h4>Sylvia H Green</h4>
-                  <p>Customer</p>
-                </div>
-              </div>
-              <div class="testimonial-quote">
-                <span class="testimonial-quote-icon"
-                  ><i class="flaticon-quote"></i
-                ></span>
-                <p>
-                  There are many variations of passages available but the
-                  majority have suffered to the alteration in some injected.
-                </p>
-              </div>
-              <div class="testimonial-rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <!-- <div class="testimonial-single">
-              <div class="testimonial-content">
-                <div class="testimonial-author-img">
-                  <img src="assets/img/testimonial/02.jpg" alt="" />
-                </div>
-                <div class="testimonial-author-info">
-                  <h4>Gordo Novak</h4>
-                  <p>Customer</p>
-                </div>
-              </div>
-              <div class="testimonial-quote">
-                <span class="testimonial-quote-icon"
-                  ><i class="flaticon-quote"></i
-                ></span>
-                <p>
-                  There are many variations of passages available but the
-                  majority have suffered to the alteration in some injected.
-                </p>
-              </div>
-              <div class="testimonial-rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="testimonial-single">
-              <div class="testimonial-content">
-                <div class="testimonial-author-img">
-                  <img src="assets/img/testimonial/03.jpg" alt="" />
-                </div>
-                <div class="testimonial-author-info">
-                  <h4>Reid E Butt</h4>
-                  <p>Customer</p>
-                </div>
-              </div>
-              <div class="testimonial-quote">
-                <span class="testimonial-quote-icon"
-                  ><i class="flaticon-quote"></i
-                ></span>
-                <p>
-                  There are many variations of passages available but the
-                  majority have suffered to the alteration in some injected.
-                </p>
-              </div>
-              <div class="testimonial-rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="testimonial-single">
-              <div class="testimonial-content">
-                <div class="testimonial-author-img">
-                  <img src="assets/img/testimonial/04.jpg" alt="" />
-                </div>
-                <div class="testimonial-author-info">
-                  <h4>Parker Jimenez</h4>
-                  <p>Customer</p>
-                </div>
-              </div>
-              <div class="testimonial-quote">
-                <span class="testimonial-quote-icon"
-                  ><i class="flaticon-quote"></i
-                ></span>
-                <p>
-                  There are many variations of passages available but the
-                  majority have suffered to the alteration in some injected.
-                </p>
-              </div>
-              <div class="testimonial-rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="testimonial-single">
-              <div class="testimonial-content">
-                <div class="testimonial-author-img">
-                  <img src="assets/img/testimonial/05.jpg" alt="" />
-                </div>
-                <div class="testimonial-author-info">
-                  <h4>Heruli Nez</h4>
-                  <p>Customer</p>
-                </div>
-              </div>
-              <div class="testimonial-quote">
-                <span class="testimonial-quote-icon"
-                  ><i class="flaticon-quote"></i
-                ></span>
-                <p>
-                  There are many variations of passages available but the
-                  majority have suffered to the alteration in some injected.
-                </p>
-              </div>
-              <div class="testimonial-rate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div> -->
-          </div> 
-        </div>
-      </div>
-      <!-- testimonial area end -->
 
-      <!-- blog area -->
-      <div class="blog-area py-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="site-heading text-center">
-                <span class="site-title-tagline"
-                  ><i class="flaticon-drive"></i> Our Blog</span
-                >
-                <h2 class="site-title">Latest News & <span>Blog</span></h2>
-                <div class="heading-divider"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
-                <div class="blog-item-img">
-                  <img src="assets/img/blog/01.jpg" alt="Thumb" />
-                </div>
-                <div class="blog-item-info">
-                  <div class="blog-item-meta">
-                    <ul>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-user-circle"></i> By Alicia Davis</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-calendar-alt"></i> January 29,
-                          2023</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <h4 class="blog-title">
-                    <a href="#"
-                      >There are many variations of passage available.</a
-                    >
-                  </h4>
-                  <a class="theme-btn" href="#"
-                    >Read More<i class="fas fa-arrow-right-long"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="blog-item wow fadeInUp" data-wow-delay=".50s">
-                <div class="blog-item-img">
-                  <img src="assets/img/blog/02.jpg" alt="Thumb" />
-                </div>
-                <div class="blog-item-info">
-                  <div class="blog-item-meta">
-                    <ul>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-user-circle"></i> By Alicia Davis</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-calendar-alt"></i> January 29,
-                          2023</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <h4 class="blog-title">
-                    <a href="#"
-                      >There are many variations of passage available.</a
-                    >
-                  </h4>
-                  <a class="theme-btn" href="#"
-                    >Read More<i class="fas fa-arrow-right-long"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="blog-item wow fadeInUp" data-wow-delay=".75s">
-                <div class="blog-item-img">
-                  <img src="assets/img/blog/03.jpg" alt="Thumb" />
-                </div>
-                <div class="blog-item-info">
-                  <div class="blog-item-meta">
-                    <ul>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-user-circle"></i> By Alicia Davis</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><i class="far fa-calendar-alt"></i> January 29,
-                          2023</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <h4 class="blog-title">
-                    <a href="#"
-                      >There are many variations of passage available.</a
-                    >
-                  </h4>
-                  <a class="theme-btn" href="#"
-                    >Read More<i class="fas fa-arrow-right-long"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- blog area end -->
+
+    
 
       
     </main>
@@ -1501,6 +963,13 @@
     <script src="assets/js/latest-car-list.js"></script>
     <script src="assets/js/car-category-list.js"></script>
     <script src="assets/js/testimonial-slider.js"></script>
+
+      <!-- intl-tel-input script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+  <!-- Your external script -->
+  <script src="assets/js/phone-number-field.js"></script>
     
   
 </html>
