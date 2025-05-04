@@ -3719,7 +3719,8 @@ label {
 }
 
 .brand-item h5 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   transition: var(--transition);
 }
 
